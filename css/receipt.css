@@ -1,0 +1,68 @@
+/* 
+    Document   : receipt
+    Created on : Feb 8, 2011, 3:18:25 PM
+    Author     : Tioma
+    Description:
+*/
+
+body
+{
+    background-color: rgb(33,29,62);
+    color: rgb(255,255,255);
+}
+p
+{
+    font-size: 20px;
+    padding: 1px;
+    margin: 0px 0px 2px 0px;
+    font-family: calibri, verdana, sans-serif;
+}
+input
+{
+/*    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid navy;
+    border-left: none;*/
+    color: rgb(255,255,255);
+    border: 2px solid rgb(204,255,0);
+    background-color: rgb(33,29,62);
+    /*background-image:  url(../img/receiptTextFieldBackground.png);*/
+/*    background-position: 0px 0px;
+    background-repeat: no-repeat;*/
+    margin: 0px 0px 2px 0px;
+    height: 20px;
+    width: 130px;
+    font-size: 15px;
+    font-family: calibri, verdana, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 3px;
+    padding-bottom: 0px;
+}
+
+select
+{
+    height: 20px;
+}
+
+div
+{
+    border: solid 1px navy;
+    padding: 0px 5px 0px 5px;
+    margin: 5px;
+}
+.receipt
+{
+    position: absolute;
+    display: block;
+    border: solid 1px navy;
+    width: auto;
+    height: auto;
+    padding: 10px;
+}
+
+#item
+{
+	display: none;
+}
+

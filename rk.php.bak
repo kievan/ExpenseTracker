@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Receipts Keeper</title>
+        <script type="text/javascript" src="./bin/js/jquery-1.5.min.js"></script>
+        <script type="text/javascript" src="./bin/js/receipt.js"></script>
+        <script type="text/javascript" src="./bin/js/receiptui.js"></script>
+        <link rel="stylesheet" type="text/css" href="./css/receipt.css"></link>
+    </head>
+    <body>
+            <form id="receipt" class="receipt" name="receipt">
+                <div id="store">
+                    <p>store</p>
+                    <input type="text" name="storeNameGeneral" value="general name"/><br/>
+                    <input type="text" name="storeNameSpecific" value="specific name"/><br/>
+                    <input type="text" name="storeTelephone" value="store telephone"/><br/>
+                    <input type="text" name="storeAddress" value="store address"/><br/>
+                </div>
+                <div id="itemListWrapper">
+                    <p>itemList</p>
+                    <div id="itemList">
+                        <div id="item">
+                            <p>item</p><div id="deleteItem">X</div>
+                            <input type="text" name="itemName" value="item name"/>
+                            <select name="itemCategory">
+                                <option value="food">food</option>
+                                <option value="clothes">clothes</option>
+                                <option value="household">household</option>
+                                <option value="hygiene">hygiene</option>
+                                <option value="leisure">leisure</option>
+                                <option value="other">other</option>
+                            </select>
+                            <input type="text" name="itemQuantity" value="quantity"/>
+                            <input type="text" name="itemPrice" value="price"/>
+                            <input type="text" name="itemTotal" value="total"/>
+                        </div>
+                    </div>
+                    <input type="button" id="addItem" value="Add Item"/>
+                </div>
+                <div id="paymentMethod">
+                    <p>paymentMethod</p>
+                    <input type="text" name="paymentMethodName" value="payment method name"/>
+                    <input type="text" name="paymentMethodDebitCardNumber" value="debit card number"/>
+                    <input type="text" name="paymentMethodCreditCardNumber" value="credit card number"/>
+                    <input type="text" name="paymentMethodPaypalEmail" value="paypal email"/>
+                </div>
+                <div id="tax">
+                    <p>tax</p>
+                    <input type="text" name="taxPercent" value="price"/>
+                    <input type="text" name="taxTotal" value="total"/>
+                </div>
+                <div id="transactionDateTime">
+                    <p>transactionDateTime</p>
+                    <input type="text" name="transactionDateTime" value="transaction Date Time"/>
+                </div>
+                <div id="number">
+                    <p>number</p>
+                    <input type="text" name="number" value="number"/>
+                </div>
+                <div id="numberOfItems">
+                    <p>numberOfItems</p>
+                    <input type="text" name="numberOfItems" value="number of items"/>
+                </div>
+                <div id="currency">
+                    <p>currency</p>
+                    <input type="text" name="currency" value="currency"/>
+                </div>
+                <div id="total">
+                    <p>total</p>
+                    <input type="text" name="total" value="total"/>
+                </div>
+
+                <input type="button" id="addReceipt" value="Add Receipt"/>
+            </form>
+    </body>
+</html>
