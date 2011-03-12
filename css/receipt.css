@@ -1,5 +1,5 @@
 /* 
-    Document   : receipt
+    Document   : receipt.css
     Created on : Feb 8, 2011, 3:18:25 PM
     Author     : Tioma
     Description:
@@ -40,14 +40,14 @@ input
     padding-bottom: 0px;
 }
 
-select
+/*select
 {
     height: 20px;
-}
+}*/
 
 div
 {
-    border: solid 1px navy;
+    /*border: solid 1px navy;*/
     padding: 0px 5px 0px 5px;
     margin: 5px;
 }
