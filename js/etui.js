@@ -4,8 +4,8 @@ $(document).ready
 (
     function()
     {
-        //$("select#regularSelect").tzSelect();
-        //$("select#regularSelect0").tzSelect();
+        $("select#regularSelect").tzSelect();
+        $("select#regularSelect0").tzSelect();
 
         $("#addItem").bind
         (
@@ -19,6 +19,7 @@ $(document).ready
 
                 var itemClone = $("#item-"+(curItemIndex-1)).clone();
                 itemClone.find("#deleteItem-"+(curItemIndex-1)).attr("id","deleteItem-"+(curItemIndex));
+                itemClone.find("#deleteItem-"+(curItemIndex)).addClass("deleteItem");
 
                 var itemHtml = itemClone.html();
                 $("#itemList").append

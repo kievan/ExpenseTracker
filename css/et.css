@@ -1,0 +1,138 @@
+/* 
+    Document   : et.css
+    Created on : Feb 8, 2011, 3:18:25 PM
+    Author     : Artyom Gordiyevsky
+    Description:
+*/
+
+body
+{
+    /*background-color: rgb(33,29,62);*/
+    background-color: rgb(72, 7, 30);
+    color: rgb(255,255,255);
+    font-family: calibri, verdana, sans-serif;
+}
+
+#transactionDateTime
+{
+    width: 173px;
+}
+
+#labels
+{
+    /*width: 630px;*/
+    margin: 10px 0px 5px 0px;
+}
+#labels div
+{
+    display: inline-table;
+    width: 100px;
+    font-size: 18px;
+    font-family: calibri, verdana, sans-serif;
+    /*border: 1px solid #fff;*/
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+p
+{
+    font-size: 20px;
+    padding: 1px;
+    margin: 0px 0px 2px 0px;
+    font-family: calibri, verdana, sans-serif;
+}
+input
+{
+/*    border-top: none;
+    border-right: none;
+    border-bottom: 1px solid navy;
+    border-left: none;*/
+    color: rgb(255,255,255);
+    border: 2px solid rgb(14,14,14);
+    background-color: rgb(86, 148, 159);
+    /*background-color: rgb(33,29,62);*/
+    /*background-image:  url(../img/receiptTextFieldBackground.png);*/
+/*    background-position: 0px 0px;
+    background-repeat: no-repeat;*/
+    margin: 0px 0px 0px 0px;
+    height: 20px;
+    width: 100px;
+    font-size: 15px;
+    font-family: calibri, verdana, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+
+/*select
+{
+    height: 20px;
+}*/
+
+/*div
+{
+    border: solid 1px navy;
+    padding: 0px 5px 0px 5px;
+    margin: 5px;
+}*/
+/*.receipt
+{
+    position: absolute;
+    display: block;
+    border: solid 1px navy;
+    width: auto;
+    height: auto;
+    padding: 10px;
+}*/
+
+form
+{
+    width: 600px;
+    /*border: 2px solid #fff;*/
+    height: 30px;
+}
+
+#deleteItem-0
+{
+    display: none;
+}
+.button
+{
+    cursor: pointer;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+}
+.deleteItem
+{
+    display: block;
+    color: rgb(255,255,255);
+    border: 2px solid rgb(14,14,14);
+    background-color: rgb(86, 148, 159);
+    /*background-color: rgb(43,39,72);*/
+    margin: 0px 0px 0px 0px;
+    position: relative;
+    height: 20px;
+    width: 20px;
+    left: 580px;
+    top: -24px;
+    text-align: center;
+    font-size: 15px;
+    font-family: calibri, verdana, sans-serif;
+}
+.addItem,
+.addItems
+{
+    position: relative;
+    color: rgb(255,255,255);
+    border: 2px solid rgb(14,14,14);
+    background-color: rgb(86, 148, 159);
+    height: 20px;
+    width: 160px;
+    text-align: center;
+    font-size: 15px;
+    font-family: calibri, verdana, sans-serif;
+    margin: 5px 0px 0px 0px;
+}

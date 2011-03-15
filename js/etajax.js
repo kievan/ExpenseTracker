@@ -60,7 +60,7 @@ $(document).ready
             alert( serverData );
         }
 
-        $("#addReceipt").bind
+        $("#addItems").bind
         (
             "click",
             function()

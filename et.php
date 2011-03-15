@@ -7,7 +7,7 @@
         <script type="text/javascript" src="./js/tzSelect/jquery.tzSelect.js"></script>
         <script type="text/javascript" src="./js/etajax.js"></script>
         <script type="text/javascript" src="./js/etui.js"></script>
-        <link rel="stylesheet" type="text/css" href="./css/receipt.css"></link>
+        <link rel="stylesheet" type="text/css" href="./css/et.css"></link>
         <link rel="stylesheet" type="text/css" href="./js/tzSelect/jquery.tzSelect.css"></link>
 
     </head>
@@ -17,9 +17,14 @@
         <div id="itemListWrapper">
             <p>Transaction Date Time</p>
             <input type="text" id="transactionDateTime" name="transactionDateTime" value="date time bought"/>
-            <p>Items</p>
             <div id="itemList">
-                <p>item</p>
+                <div id="labels">
+                    <div id="itemName">Name</div>
+                    <div id="itemCategory">Category</div>
+                    <div id="itemQuantity">Quantity</div>
+                    <div id="itemPrice">Price</div>
+                    <div id="itemTotal">Total</div>
+                </div>
                 <form id="item-0" name="item-0">
                     <input type="text" name="name"/>
                     <select name="itemCategory" id="regularSelect">
@@ -33,12 +38,11 @@
                     <input type="text" name="itemQuantity"/>
                     <input type="text" name="itemPrice"/>
                     <input type="text" name="itemTotal"/>
-                    <span id="deleteItem-0">X</span>
+                    <div id="deleteItem-0" class="button deleteItem">X</div>
                 </form>
             </div>
-
-            <input type="button" id="addItem" value="Add Item"/>
+            <div id="addItem" class="button addItem">Add Item</div>
         </div>
-        <input type="button" id="addReceipt" value="Add Receipt"/>
+        <div id="addItems" class="button addItems">Add Item Collection</div>
     </body>
 </html>
