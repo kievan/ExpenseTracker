@@ -41,9 +41,9 @@ $(document).ready
         {
             switch( javaScriptFunction )
             {
-                case "dummyResponse":
+                case "postItemsJSONResponse":
                 {
-                    dummyResponse( serverSideData );
+                    postItemsJSONResponse( serverSideData );
                     break;
                 }
 
@@ -55,7 +55,7 @@ $(document).ready
             }
         }
 
-        function dummyResponse( serverData )
+        function postItemsJSONResponse( serverData )
         {
             alert( serverData );
         }
@@ -64,6 +64,18 @@ $(document).ready
         (
             "click",
             function()
+            {
+                postItemsJSON();
+            }
+        );
+
+        function postItemsJSON()
+        {
+            if( itemIndexAr.length == 0 )
+            {
+                alert( "Please add at least one item." );
+            }
+            else
             {
                 var jsonStr = "jsonStr=[";
 //                var tmpAr = itemIndexAr.splice(itemIndexAr.length-1,1);
@@ -75,7 +87,6 @@ $(document).ready
                     $("#transactionDateTime").serialize().toString().split("=");
                 jsonStr += '{"'+ transactionDateTime[0] + '":"'
                                + transactionDateTime[1] + '"},';
-
                 for( var i = 0; i < itemIndexAr.length; i++ )
                 {
                     var index = itemIndexAr[i];
@@ -87,11 +98,11 @@ $(document).ready
                                 '"total":"'   +itemParts[4].split("=")[1]+'"}';
                     jsonStr += ( i == itemIndexAr.length-1 ) ? "" : ",";
                 }
-
                 jsonStr += ']';
-                myXHR( "./php/storeItems.php", "dummyResponse", jsonStr );
+                myXHR( "./php/storeItems.php", "postItemsJSONResponse", jsonStr );
             }
-        )
+        }
+
     }
 );
 

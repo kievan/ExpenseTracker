@@ -23,16 +23,21 @@ $(document).ready
             "click",
             function()
             {
-                var curitemIndex = -111;
+                var firstItemIndex = -111;
+                var lastItemIndex  = -222;
+                var curItemIndex   = -333;
                 if( itemIndexAr.length == 0 )
                 {
-                    curItemIndex = 0;
-                    itemIndexAr.push(curItemIndex);
+                    firstItemIndex = 0;
+                    curItemIndex   = firstItemIndex;
+                    itemIndexAr.push( firstItemIndex );
                 }
                 else
                 {
-                    curItemIndex = itemIndexAr[itemIndexAr.length-1];
-                    itemIndexAr.push(++curItemIndex);
+                    lastItemIndex = itemIndexAr[itemIndexAr.length-1];
+
+                    curItemIndex = (lastItemIndex+1);
+                    itemIndexAr.push( curItemIndex );
                 }
 
                 var itemClone = $("#item-arxetyp").clone();
@@ -65,20 +70,18 @@ $(document).ready
                     "click",
                     function()
                     {
-                        //var curItemDelIndex = $(this).parent().attr("id").split("-")[1];
-                        var curItemDelIndex = curItemIndex;
-                        //curItemDelIndex = parseInt(curItemDelIndex);
+                        var curItemDelIndex = $(this).parent().attr("id").split("-")[1];
+                        var curItemArrayIndex = -111;
                         for( var i = 0; i < itemIndexAr.length; i++)
                         {
                             if(itemIndexAr[i]==curItemDelIndex)
                             {
-                                curItemDelIndex = i;
+                                curItemArrayIndex = i;
                                 break;
                             }
                         }
 
-                        if( itemIndexAr.length > 1)
-                            itemIndexAr.splice(curItemDelIndex,1);
+                        itemIndexAr.splice(curItemArrayIndex,1);
                         $(this).parent().remove();
                     }
                 );
