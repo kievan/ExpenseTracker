@@ -66,9 +66,9 @@ $(document).ready
             function()
             {
                 var jsonStr = "jsonStr=[";
-                var tmpAr = itemIndexAr.splice(itemIndexAr.length-1,1);
-                tmpAr.pop();
-                var itemIndexArStr = tmpAr.join("|");
+//                var tmpAr = itemIndexAr.splice(itemIndexAr.length-1,1);
+//                tmpAr.pop();
+                var itemIndexArStr = itemIndexAr.join("|");
                 jsonStr += '{"itemIndexArStr":"'+itemIndexArStr+'"},';
 
                 var transactionDateTime =
@@ -76,7 +76,7 @@ $(document).ready
                 jsonStr += '{"'+ transactionDateTime[0] + '":"'
                                + transactionDateTime[1] + '"},';
 
-                for( var i = 0; i < itemIndexAr.length-1; i++ )
+                for( var i = 0; i < itemIndexAr.length; i++ )
                 {
                     var index = itemIndexAr[i];
                     var itemParts =  $("#item-"+index).serialize().toString().split("&");
@@ -85,7 +85,7 @@ $(document).ready
                                 '"quantity":"'+itemParts[2].split("=")[1]+'",' +
                                 '"price":"'   +itemParts[3].split("=")[1]+'",' +
                                 '"total":"'   +itemParts[4].split("=")[1]+'"}';
-                    jsonStr += ( i == itemIndexAr.length-2 ) ? "" : ",";
+                    jsonStr += ( i == itemIndexAr.length-1 ) ? "" : ",";
                 }
 
                 jsonStr += ']';

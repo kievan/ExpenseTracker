@@ -1,4 +1,4 @@
-var itemIndexAr = [0];
+var itemIndexAr = [];
 
 $(document).ready
 (
@@ -23,7 +23,17 @@ $(document).ready
             "click",
             function()
             {
-                var curItemIndex = itemIndexAr[itemIndexAr.length-1];
+                var curitemIndex = -111;
+                if( itemIndexAr.length == 0 )
+                {
+                    curItemIndex = 0;
+                    itemIndexAr.push(curItemIndex);
+                }
+                else
+                {
+                    curItemIndex = itemIndexAr[itemIndexAr.length-1];
+                    itemIndexAr.push(++curItemIndex);
+                }
 
                 var itemClone = $("#item-arxetyp").clone();
                 itemClone.find("#regularSelect-arxetyp").attr("id","regularSelect-"+(curItemIndex));
@@ -72,8 +82,6 @@ $(document).ready
                         $(this).parent().remove();
                     }
                 );
-
-               itemIndexAr.push(++curItemIndex);
             }
         );
     }
