@@ -7,11 +7,12 @@
 	/* This is the container of the new select element */
 
         top: 4px;
+        left: -6px;
 	height:20px;
 	display:inline-block;
 	width:100px;
 	position:relative;
-	margin:0px 4px 0px 0px;
+	margin:0px 10px 0px 10px;
 	
 	/* Preloading the background image for the dropdown */
 	background:url("img/dropdown_slice.png") no-repeat -99999px;
@@ -34,7 +35,7 @@
 	/* Using CSS3 multiple backgrounds and a fallback */
 	
 	background:url('img/select_slice.png') repeat-x #ddd;
-	background-image:url('img/select_slice.png'),url('img/select_slice.png'),url('img/select_slice.png'),url('img/select_slice.png');
+	/*background-image:url('img/select_slice.png'),url('img/select_slice.png'),url('img/select_slice.png'),url('img/select_slice.png');*/
 	/*background-position:0 -136px, right -204px, 50% -68px, 0 0;*/
 	background-repeat: no-repeat, no-repeat, no-repeat, repeat-x;
 	
@@ -56,10 +57,10 @@
 
 .tzSelect .dropDown{
 	position:absolute;
-	top:25px;
+	top:15px;
 	left:-30px;
-	width:100%;
-	border:1px solid #32333b;
+	width:100px;
+	border:2px solid #32333b;
 	list-style:none;
 	z-index:1000;
 	

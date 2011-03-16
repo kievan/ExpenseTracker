@@ -4,8 +4,19 @@ $(document).ready
 (
     function()
     {
-        $("select#regularSelect").tzSelect();
-        $("select#regularSelect0").tzSelect();
+//        $("#regularSelect-0").tzSelect();
+//        $("#regularSelect-0").styledSelect();
+
+        $("#transactionDateTime").addClass("transactionDateTime");
+        $("#deleteItem-arxetyp").addClass("button deleteItem");
+        $("#item-arxetyp").addClass("hideArxetyp");
+//        $("#item-arxetyp div").addClass("hideArxetyp");
+//        $("#item-arxetyp div input").addClass("hideArxetyp");
+//        $("#item-arxetyp div select").addClass("hideArxetyp");
+        //$("#itemList form").addClass("item");
+        $("#item-arxetyp div").addClass("inputFieldWrapper");
+
+
 
         $("#addItem").bind
         (
@@ -13,14 +24,13 @@ $(document).ready
             function()
             {
                 var curItemIndex = itemIndexAr[itemIndexAr.length-1];
-                
-                curItemIndex++;
-                itemIndexAr.push(curItemIndex);
 
-                var itemClone = $("#item-"+(curItemIndex-1)).clone();
-                itemClone.find("#deleteItem-"+(curItemIndex-1)).attr("id","deleteItem-"+(curItemIndex));
+                var itemClone = $("#item-arxetyp").clone();
+                itemClone.find("#regularSelect-arxetyp").attr("id","regularSelect-"+(curItemIndex));
+//                itemClone.find("#regularSelect-"+(curItemIndex)).styledSelect();
+                itemClone.find("#deleteItem-arxetyp").attr("id","deleteItem-"+(curItemIndex));
                 itemClone.find("#deleteItem-"+(curItemIndex)).addClass("deleteItem");
-
+                
                 var itemHtml = itemClone.html();
                 $("#itemList").append
                 (
@@ -29,31 +39,41 @@ $(document).ready
                     +"</form>"
                 );
 
+                //$("#regularSelect-"+(curItemIndex)).tzSelect();
+                $("div div input").addClass("inputField");
+                $("select").addClass("inputField");
+                $("#itemList form").addClass("item");
+                $("#regularSelect-"+(curItemIndex)).addClass("styledSelect");
+                $("#regularSelect-"+(curItemIndex)).styledSelect({innerClass:"innerStyledSelect"});
+//                $("#regularSelect-"+(curItemIndex)).parent().addClass();
+//                itemClone.find("#regularSelect-"+(curItemIndex)).addClass("innerStyledSelect");
+//                $("#regularSelect-"+(curItemIndex)).trigger("resize");
+
+
                 $("#deleteItem-"+(curItemIndex)).bind
                 (
-                        "click",
-                        function()
+                    "click",
+                    function()
+                    {
+                        //var curItemDelIndex = $(this).parent().attr("id").split("-")[1];
+                        var curItemDelIndex = curItemIndex;
+                        //curItemDelIndex = parseInt(curItemDelIndex);
+                        for( var i = 0; i < itemIndexAr.length; i++)
                         {
-                            if( $(this).parent().attr("id") != "item-0" )
+                            if(itemIndexAr[i]==curItemDelIndex)
                             {
-                                //var curItemDelIndex = $(this).parent().attr("id").split("-")[1];
-                                var curItemDelIndex = curItemIndex;
-                                //curItemDelIndex = parseInt(curItemDelIndex);
-                                for( var i = 0; i < itemIndexAr.length; i++)
-                                {
-                                    if(itemIndexAr[i]==curItemDelIndex)
-                                    {
-                                        curItemDelIndex = i;
-                                        break;
-                                    }
-                                }
-                                
-                                if( itemIndexAr.length > 1)
-                                    itemIndexAr.splice(curItemDelIndex,1);
-                                $(this).parent().remove();
+                                curItemDelIndex = i;
+                                break;
                             }
                         }
+
+                        if( itemIndexAr.length > 1)
+                            itemIndexAr.splice(curItemDelIndex,1);
+                        $(this).parent().remove();
+                    }
                 );
+
+               itemIndexAr.push(++curItemIndex);
             }
         );
     }

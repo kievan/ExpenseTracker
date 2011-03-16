@@ -13,41 +13,45 @@ body
     font-family: calibri, verdana, sans-serif;
 }
 
-#transactionDateTime
+.transactionDateTime
 {
-    width: 173px;
+    color: rgb(255,255,255);
+    border: 2px solid rgb(14,14,14);
+    background-color: rgb(86, 148, 159);
+    height: 20px;
+    width: 133px;
+    font-size: 15px;
+    font-family: calibri, verdana, sans-serif;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 
 #labels
 {
-    /*width: 630px;*/
+    /*width: 650px;*/
+    /*width: auto;*/
     margin: 10px 0px 5px 0px;
 }
 #labels div
 {
     display: inline-table;
-    width: 100px;
+    width: 115px;
     font-size: 18px;
     font-family: calibri, verdana, sans-serif;
     /*border: 1px solid #fff;*/
-    padding-left: 5px;
+/*    padding-left: 5px;
     padding-right: 5px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 0px;*/
+    text-align: center;
 }
-p
-{
-    font-size: 20px;
-    padding: 1px;
-    margin: 0px 0px 2px 0px;
-    font-family: calibri, verdana, sans-serif;
-}
-input
+.inputFieldWrapper
 {
 /*    border-top: none;
     border-right: none;
     border-bottom: 1px solid navy;
     border-left: none;*/
+    display: inline-table;
     color: rgb(255,255,255);
     border: 2px solid rgb(14,14,14);
     background-color: rgb(86, 148, 159);
@@ -55,9 +59,44 @@ input
     /*background-image:  url(../img/receiptTextFieldBackground.png);*/
 /*    background-position: 0px 0px;
     background-repeat: no-repeat;*/
-    margin: 0px 0px 0px 0px;
     height: 20px;
-    width: 100px;
+    width: 110px;
+    font-size: 15px;
+    font-family: calibri, verdana, sans-serif;
+/*    padding-left: 5px;
+    padding-right: 5px;*//*
+    padding-top: 0px;
+    padding-bottom: 0px;*/
+}
+.inputField
+{
+    width: inherit;
+    font-size: inherit;
+    height: inherit;
+    font-family: inherit;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
+
+.innerStyledSelect
+{
+    /*border: 2px solid rgb(14,14,14);*/
+    background-color: rgb(86, 148, 159);
+    height: 20px;
+    width: 110px;
+    text-align: center;
+/*    padding-left: 5px;
+    padding-right: 5px;*/
+}
+.styledSelect
+{
+    color: rgb(255,255,255);
+    background-color: rgb(86, 148, 159);
+    text-align: center;
+
+    height: 20px;
+    width: 110px;
     font-size: 15px;
     font-family: calibri, verdana, sans-serif;
     padding-left: 5px;
@@ -66,44 +105,24 @@ input
     padding-bottom: 0px;
 }
 
-
-/*select
+.item
 {
-    height: 20px;
-}*/
-
-/*div
-{
-    border: solid 1px navy;
-    padding: 0px 5px 0px 5px;
-    margin: 5px;
-}*/
-/*.receipt
-{
-    position: absolute;
-    display: block;
-    border: solid 1px navy;
-    width: auto;
-    height: auto;
-    padding: 10px;
-}*/
-
-form
-{
-    width: 600px;
-    /*border: 2px solid #fff;*/
+    width: 650px;
     height: 30px;
+    margin-top: 3px;
 }
 
-#deleteItem-0
+.hideArxetyp
 {
     display: none;
 }
+
 .button
 {
     cursor: pointer;
     border-radius: 5px;
     -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
 }
 .deleteItem
 {
@@ -116,7 +135,7 @@ form
     position: relative;
     height: 20px;
     width: 20px;
-    left: 580px;
+    left: 605px;
     top: -24px;
     text-align: center;
     font-size: 15px;
